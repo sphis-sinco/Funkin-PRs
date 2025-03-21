@@ -115,6 +115,12 @@ class WindowUtil
       windowExit.dispatch(exitCode);
     });
 
+    #if hl
+    openfl.Lib.current.stage.addEventListener(openfl.events.Event.EXIT_FRAME, (e:openfl.events.Event) -> {
+      hl.Api.checkReload();
+    });
+    #end
+
     #if (desktop || html5)
     openfl.Lib.current.stage.addEventListener(openfl.events.KeyboardEvent.KEY_DOWN, (e:openfl.events.KeyboardEvent) -> {
       if (haxe.ui.focus.FocusManager.instance.focus != null)
