@@ -1167,7 +1167,7 @@ class Project extends HXProject
       addHaxelib('hxcpp-debug-server'); // VSCode debug support
     }
 
-    if ((isDesktop() || isMobile()) && !isHashLink() && FEATURE_VIDEO_PLAYBACK.isEnabled(this))
+    if ((isDesktop() || isMobile()) && FEATURE_VIDEO_PLAYBACK.isEnabled(this))
     {
       // hxvlc doesn't function on HashLink or non-desktop platforms
       // It's also unnecessary if video playback is disabled
