@@ -157,7 +157,6 @@ class MemoryUtil
   {
     #if cpp
     cpp.vm.Gc.compact();
-    #elseif hl
     #else
     throw 'Not implemented!';
     #end
