@@ -4,8 +4,8 @@
       "name": "FlxPartialSound",
       "type": "git",
       "dir": null,
-      "ref": "9f7d2d578f37bfffc553c831d94f37c4b99082b7",
-      "url": "https://github.com/NotHyper-474/FlxPartialSound-PR.git"
+      "ref": "4e86b724ca43489a59ea465a46ffc12598e5df15",
+      "url": "https://github.com/FunkinCrew/FlxPartialSound.git"
     },
     {
       "name": "astc-compressor",
@@ -170,8 +170,8 @@
       "name": "lime",
       "type": "git",
       "dir": null,
-      "ref": "hashlink-patches",
-      "url": "https://github.com/NotHyper-474/lime.git"
+      "ref": "f109a083023a9e5622342257993fc745d9bbb959",
+      "url": "https://github.com/FunkinCrew/lime"
     },
     {
       "name": "newgrounds",
