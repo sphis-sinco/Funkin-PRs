@@ -171,8 +171,22 @@ class CreditsState extends MusicBeatState
     if (!entry.hasBuiltBody)
     {
       var lineData:CreditsDataMember = entry.data.body[entry.lineIndexToBuild];
-      var line:FlxText = buildCreditsLine(lineData.line, creditsLineY, false, CreditsSide.Left);
-      creditsLineY += CREDITS_FONT_SIZE * line.textField.numLines;
+      var line:FlxText;
+      var image:FlxSprite;
+
+      if (!lineData.is_image)
+      {
+        line = buildCreditsLine(lineData.line ?? '', creditsLineY, false, CreditsSide.Left);
+        creditsLineY += CREDITS_FONT_SIZE * line.textField.numLines;
+      }
+      else
+      {
+        image = new FlxSprite(Paths.image(lineData.image_path ?? "cursor/michael"));
+        image.scale.set(lineData.image_scale ?? 1, lineData.image_scale ?? 1);
+
+        creditsLineY += image.height + (lineData.image_padding ?? 0);
+      }
+
       entry.lineIndexToBuild++;
 
       if (entry.lineIndexToBuild >= entry.data.body.length)
