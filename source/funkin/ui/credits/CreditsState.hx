@@ -185,6 +185,7 @@ class CreditsState extends MusicBeatState
         image.scale.set(lineData.image_scale ?? 1, lineData.image_scale ?? 1);
 
         creditsLineY += image.height + (lineData.image_padding ?? 0);
+        creditsGroup.add(image);
       }
 
       entry.lineIndexToBuild++;
