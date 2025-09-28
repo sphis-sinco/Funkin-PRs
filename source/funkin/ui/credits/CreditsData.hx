@@ -40,4 +40,12 @@ typedef CreditsDataMember =
   @:optional
   @:default("cursor/michael")
   var image_path:String;
+
+  @:optional
+  @:default(1)
+  var image_scale:Float;
+
+  @:optional
+  @:default(0)
+  var image_padding:Float;
 }
