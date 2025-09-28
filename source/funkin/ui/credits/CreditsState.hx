@@ -184,6 +184,9 @@ class CreditsState extends MusicBeatState
         image = new FlxSprite(Paths.image(lineData.image_path ?? "cursor/michael"));
         image.scale.set(lineData.image_scale ?? 1, lineData.image_scale ?? 1);
 
+        image.x = creditsGroup.x;
+        image.y = (FULL_WIDTH / 2) + creditsGroup.y;
+
         creditsLineY += image.height + (lineData.image_padding ?? 0);
         creditsGroup.add(image);
       }
@@ -237,10 +240,18 @@ class CreditsState extends MusicBeatState
   function killOffScreenLines():Void
   {
     creditsGroup.forEachExists(function(creditsLine:FlxSprite) {
-      if (creditsLine.y + creditsLine.height <= 0)
+      try
       {
-        creditsLine.kill();
-        trace("killed line");
+        if (creditsLine.y + creditsLine.height <= 0)
+        {
+          creditsLine.kill();
+          trace("killed line");
+        }
+      }
+      catch (e)
+      {
+        creditsLine.destroy();
+        trace("destroyed line (" + e + ")");
       }
     });
   }
