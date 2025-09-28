@@ -30,6 +30,7 @@ typedef CreditsDataRole =
  */
 typedef CreditsDataMember =
 {
+  @:optional
   var line:String;
 
   @:optional
