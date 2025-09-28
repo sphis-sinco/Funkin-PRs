@@ -38,6 +38,6 @@ typedef CreditsDataMember =
   var is_image:Bool;
 
   @:optional
-  @:default("")
+  @:default("cursor/michael")
   var image_path:String;
 }
