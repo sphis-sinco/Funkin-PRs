@@ -31,4 +31,12 @@ typedef CreditsDataRole =
 typedef CreditsDataMember =
 {
   var line:String;
+
+  @:optional
+  @:default(false)
+  var is_image:Bool;
+
+  @:optional
+  @:default("")
+  var image_path:String;
 }
