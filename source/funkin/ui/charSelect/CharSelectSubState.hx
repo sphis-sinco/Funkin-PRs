@@ -23,7 +23,7 @@ import funkin.play.stage.Stage;
 import funkin.save.Save;
 import funkin.ui.freeplay.FreeplayState;
 import funkin.ui.freeplay.charselect.PlayableCharacter;
-import funkin.ui.PixelatedIcon;
+import funkin.ui.pixelicon.PixelatedIcon;
 import funkin.util.FramesJSFLParser;
 import funkin.util.FramesJSFLParser.FramesJSFLInfo;
 import funkin.util.HapticUtil;
